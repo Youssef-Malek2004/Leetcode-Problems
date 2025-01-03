@@ -10,3 +10,14 @@ Console.WriteLine("Hello, World!");
 
 var ReverseIntegerSol = new ReverseIntegerSolution();
 Console.Out.WriteLine(ReverseIntegerSol.Reverse(123));
+
+ListNode l1 = new ListNode(5);
+l1.next = new ListNode(4);
+
+ListNode l2 = new ListNode(5);
+l2.next = new ListNode(5);
+
+var AddTwoNumSol = new AddTwoNumbersSolution();
+ListNode.PrintListNode(AddTwoNumSol.AddTwoNumbers(l1,l2));
+
+Console.Out.WriteLine(new LongestSubstringNoRepeat().LengthOfLongestSubstringChatGpt("abacadef"));
