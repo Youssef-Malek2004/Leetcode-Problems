@@ -1,5 +1,6 @@
 ﻿
 using Leetcode_Problems.Easy;
+using Leetcode_Problems.Hard;
 using Leetcode_Problems.Medium;
 using Leetcode_Problems.Utils;
 
@@ -20,4 +21,4 @@ l2.next = new ListNode(5);
 var AddTwoNumSol = new AddTwoNumbersSolution();
 ListNode.PrintListNode(AddTwoNumSol.AddTwoNumbers(l1,l2));
 
-Console.Out.WriteLine(new LongestSubstringNoRepeat().LengthOfLongestSubstringChatGpt("abacadef"));
+Console.Out.WriteLine(new MedianOfTwoSortedArraysSolution().FindMedianSortedArrays([1,2,3],[4,5,6]));
