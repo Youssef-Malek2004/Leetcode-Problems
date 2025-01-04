@@ -27,6 +27,7 @@ public class StringToIntAtoiSolution
 
             leadingWhitespaces = false;
             
+            
             if (!Checked)
             {
                 positive = !s[i].Equals('-');
