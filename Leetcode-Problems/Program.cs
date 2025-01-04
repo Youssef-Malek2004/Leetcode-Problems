@@ -22,3 +22,17 @@ var AddTwoNumSol = new AddTwoNumbersSolution();
 ListNode.PrintListNode(AddTwoNumSol.AddTwoNumbers(l1,l2));
 
 Console.Out.WriteLine(new MedianOfTwoSortedArraysSolution().FindMedianSortedArrays([1,2,3],[4,5,6]));
+
+LCA_BTreesSolution.BinaryTreeNode<int> treeNode = new LCA_BTreesSolution.BinaryTreeNode<int>(5);
+
+treeNode.left = new LCA_BTreesSolution.BinaryTreeNode<int>(2);
+treeNode.left.left = new LCA_BTreesSolution.BinaryTreeNode<int>(1);
+treeNode.left.right = new LCA_BTreesSolution.BinaryTreeNode<int>(3);
+
+treeNode.right = new LCA_BTreesSolution.BinaryTreeNode<int>(7);
+treeNode.right.left = new LCA_BTreesSolution.BinaryTreeNode<int>(6);
+treeNode.right.right = new LCA_BTreesSolution.BinaryTreeNode<int>(8);
+
+Console.Out.WriteLine(new LCA_BTreesSolution().lcaOfThreeNodes(treeNode,1,3,2).data);
+
+Console.Out.WriteLine(new StringToIntAtoiSolution().MyAtoi("  +  413"));
