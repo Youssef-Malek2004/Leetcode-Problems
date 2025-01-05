@@ -37,4 +37,4 @@ Console.Out.WriteLine(new LCA_BTreesSolution().lcaOfThreeNodes(treeNode,1,3,2).d
 
 Console.Out.WriteLine(new StringToIntAtoiSolution().MyAtoi("  +  413"));
 
-Console.Out.WriteLine(new LongestPalindromeSubstringSolution().LongestPalindrome("badtfidontknowMAAAAMdadwdawdasd"));
+Console.Out.WriteLine(new ZigzagConversionSolution().Convert("ab",2));
