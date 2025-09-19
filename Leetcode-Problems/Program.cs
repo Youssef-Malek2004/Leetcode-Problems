@@ -57,4 +57,6 @@ Console.WriteLine("Hello, World!");
 
 // Console.WriteLine(new MaximumAbsoluteSumSolution().MaxAbsoluteSum([2,-5,1,-4,3,2]));
 
-Console.Write(new ValidPalindrome().IsPalindrome("A man, a plan, a canal: Panama"));
+// Console.Write(new ValidPalindrome().IsPalindrome("A man, a plan, a canal: Panama"));
+
+Console.WriteLine(new ThreeSum().ThreeSumSol([0,0,0]));
