@@ -1,5 +1,6 @@
 ﻿
 using System.Collections;
+using Leetcode_Problems;
 using Leetcode_Problems.Easy;
 using Leetcode_Problems.Hard;
 using Leetcode_Problems.Medium;
@@ -59,4 +60,4 @@ Console.WriteLine("Hello, World!");
 
 // Console.Write(new ValidPalindrome().IsPalindrome("A man, a plan, a canal: Panama"));
 
-Console.WriteLine(new ThreeSum().ThreeSumSol([0,0,0]));
+Console.WriteLine(new Stripe().calculate_merchant_fraud_score(["merchant1,1200,customer1,10", "merchant1,500,customer1,10", "merchant2,2400,customer1,15", "merchant1,800,customer1,16", "merchant1,1000,customer2,17", "merchant1,1400,customer1,10"], ["1000,2,8,15", "1400,5,3,19", "2300,3,17,3", "1800,2,9,6", "1000,4,8,2", "1200,3,11,7"], ["merchant1,10", "merchant2,20"]));
