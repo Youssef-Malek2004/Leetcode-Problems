@@ -18,8 +18,10 @@ class Solution:
 
         return self.robHelper(0, nums, dp)
 
-    def rob(self, nums: list[int]) -> int:
-        dp = [-1] * (len(nums) + 1)
-        dp[len(nums + 1)] = 
+    def robTopDown(self, nums: list[int]) -> int:
+        dp = [0] * (len(nums) + 2)
 
-        for i in range(len(nums), -1, -1):
+        for i in range(len(nums) - 1, -1, -1):
+            dp[i] = max(dp[i + 1], nums[i] + dp[i+2])
+
+        return dp[0]
