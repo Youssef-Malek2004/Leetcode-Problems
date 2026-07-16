@@ -1,77 +1,40 @@
 class Solution:
     def search(self, nums: list[int], target: int) -> int:
-        # First find the pivot point
-        lo = 0
-        hi = len(nums) - 1
-        mid = (hi + lo) // 2
+        if len(nums) == 0:
+            return -1
 
-        pivot = False
+        if len(nums) == 1:
+            return 0 if nums[0] == target else -1
 
-        if nums[0] > nums[-1]: # If there could be a pivot
-            pivot = True
-            while hi - lo > 1:
-                mid = (hi + lo) // 2
+        before = nums[0]
+        left_rotated = False
+        for i in range(1, len(nums)):
+            if nums[i] < before:
+                left_rotated = True
+                pivot = i
+                break
 
-                if nums[lo] > nums[mid]: # lo to mid has pivot
-                    hi = mid
-                
-                else:
-                    lo = mid
+            before = nums[i]
 
-        looping = True
-        while looping:
-            if (lo < hi and pivot): # If we have a pivot
-                remaining = len(nums) - lo
-                mid = hi + ((remaining) // 2)
+        if left_rotated:
+            if target > nums[-1]:
+                lo, hi = 0, pivot - 1
+            else:
+                lo, hi = pivot, len(nums) - 1
+        else:
+            lo, hi = 0, len(nums) - 1
 
-                print(nums)
-                print(lo)
-                print(mid)
-                print(hi)
+        while lo < hi:
+            mid = (lo + hi) // 2
 
+            if nums[mid] == target:
+                return mid
 
-                if mid >= len(nums):
-                    mid -= len(nums)
+            if nums[mid] > target:
+                hi = mid - 1
 
-                if nums[mid] == target:
-                    return mid
-
-                if nums[mid] > target:
-                    lo = mid
-
-                else :
-                    hi = mid + 1
-                    if(hi >= len(nums)):
-                        hi -= len(nums)
-
-            else: # no pivot
-                if pivot:
-                    low = hi
-                    high = lo
-                else:
-                    low = lo
-                    high = hi
-
-                while high >= low:
-                    if high == low:
-                        return high if nums[high] == target else -1
-
-                    mid = (high + low) // 2
-
-                    print(nums)
-                    print(low)
-                    print(f"mid is {mid}")
-                    print(high)
-
-                    if nums[mid] == target:
-                        return mid
-
-                    if nums[mid] > target:
-                        high = mid 
-                    else:
-                        low = mid + 1
-
-                looping = False
+            else:
+                lo = mid + 1
 
         return -1
 
